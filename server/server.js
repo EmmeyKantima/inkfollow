@@ -19,6 +19,7 @@ var chapterRoutes = require("./routes/chapterRoutes");
 var eventRoutes = require("./routes/eventRoutes");
 var sceneRoutes = require("./routes/sceneRoutes");
 var draftRoutes = require("./routes/draftRoutes");
+var storyCheckRoutes = require("./routes/storyCheckRoutes");
 
 var app = express();
 var PORT = process.env.PORT || 5000;
@@ -36,6 +37,7 @@ app.use("/api/chapters", chapterRoutes);
 app.use("/api/events", eventRoutes);
 app.use("/api/scenes", sceneRoutes);
 app.use("/api/drafts", draftRoutes);
+app.use("/api/story-check", storyCheckRoutes);
 
 app.get("/api/health", function (req, res) {
     res.json({
