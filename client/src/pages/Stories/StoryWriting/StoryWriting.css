@@ -2,12 +2,10 @@
     max-width: 1200px;
     margin: 0 auto;
 }
-
 .writing-loading {
     color: #7f8c84;
     font-size: 14px;
 }
-
 .writing-header {
     display: flex;
     align-items: flex-end;
@@ -15,11 +13,9 @@
     gap: 24px;
     margin-bottom: 28px;
 }
-
 .writing-header-left {
     min-width: 0;
 }
-
 .writing-eyebrow {
     margin: 0 0 7px;
     color: #2f6653;
@@ -27,7 +23,6 @@
     font-weight: 700;
     letter-spacing: 1.4px;
 }
-
 .writing-header h1 {
     margin: 0;
     color: #263b30;
@@ -35,7 +30,6 @@
     font-size: 30px;
     font-weight: 500;
 }
-
 .writing-description {
     max-width: 650px;
     margin: 8px 0 0;
@@ -43,29 +37,25 @@
     font-size: 14px;
     line-height: 1.6;
 }
-
 .writing-header-actions {
     display: flex;
     align-items: center;
     gap: 9px;
     flex-shrink: 0;
 }
-
 .save-message {
     font-size: 12px;
     font-weight: 600;
 }
-
 .save-message.saved {
     color: #4d8b69;
 }
-
 .save-message.error {
     color: #b45f45;
 }
-
 .story-guide-button,
-.save-draft-button {
+.save-draft-button,
+.story-check-open-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,82 +67,85 @@
     font-weight: 600;
     cursor: pointer;
 }
-
-.story-guide-button {
-    border: 1px solid #cbd5ce;
-    background-color: #ffffff;
+.story-check-open-button {
+    border: 1px solid #b9cdbd;
+    background: #edf3e9;
     color: #2f6653;
 }
-
-.story-guide-button:hover {
-    background-color: #f1f5ef;
+.story-check-open-button:hover {
+    background: #dce8d5;
 }
-
+.story-check-open-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.story-guide-button {
+    border: 1px solid #cbd5ce;
+    background: #ffffff;
+    color: #2f6653;
+}
+.story-guide-button:hover {
+    background: #f1f5ef;
+}
 .save-draft-button {
     border: 1px solid #2f6653;
-    background-color: #2f6653;
+    background: #2f6653;
     color: #ffffff;
 }
-
 .save-draft-button:hover {
-    background-color: #255744;
+    background: #255744;
 }
-
 .save-draft-button:disabled {
     opacity: 0.6;
     cursor: not-allowed;
 }
 
+/* CHAPTER LIST */
 .chapter-list {
     overflow: hidden;
     border: 1px solid #e0e6df;
     border-radius: 10px;
-    background-color: #ffffff;
+    background: #ffffff;
 }
-
-.chapter-list-header {
+.chapter-list-header,
+.chapter-list-row {
     display: grid;
     grid-template-columns: minmax(300px, 2fr) 1fr;
+}
+.chapter-list-header {
     padding: 12px 20px;
     border-bottom: 1px solid #e0e6df;
-    background-color: #f7f7f2;
+    background: #f7f7f2;
     color: #7f8c84;
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
 }
-
 .chapter-list-row {
     width: 100%;
-    display: grid;
-    grid-template-columns: minmax(300px, 2fr) 1fr;
     align-items: center;
     min-height: 68px;
     padding: 14px 20px;
     border: none;
     border-bottom: 1px solid #e7ebe5;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #263b30;
     text-align: left;
     font-family: inherit;
     cursor: pointer;
 }
-
 .chapter-list-row:last-child {
     border-bottom: none;
 }
-
 .chapter-list-row:hover {
-    background-color: #fafbf8;
+    background: #fafbf8;
 }
-
 .chapter-list-title {
     display: flex;
     align-items: center;
     gap: 11px;
     min-width: 0;
 }
-
 .chapter-list-title strong {
     overflow: hidden;
     color: #263b30;
@@ -161,12 +154,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 .chapter-list-act {
     color: #7f8c84;
     font-size: 13px;
 }
-
 .status-dot {
     display: inline-block;
     width: 9px;
@@ -174,19 +165,15 @@
     flex-shrink: 0;
     border-radius: 50%;
 }
-
 .status-dot.not-started {
-    background-color: #d98245;
+    background: #d98245;
 }
-
 .status-dot.in-progress {
-    background-color: #d6b84c;
+    background: #d6b84c;
 }
-
 .status-dot.completed {
-    background-color: #4d8b69;
+    background: #4d8b69;
 }
-
 .writing-empty {
     display: flex;
     align-items: center;
@@ -195,16 +182,14 @@
     min-height: 280px;
     border: 1px solid #e0e6df;
     border-radius: 10px;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #7f8c84;
     text-align: center;
 }
-
 .writing-empty svg {
     margin-bottom: 10px;
     color: #2f6653;
 }
-
 .writing-empty h2 {
     margin: 0;
     color: #263b30;
@@ -212,17 +197,16 @@
     font-size: 21px;
     font-weight: 500;
 }
-
 .writing-empty p {
     margin: 7px 0 0;
     font-size: 13px;
 }
 
+/* CHAPTER SELECTOR */
 .chapter-selector {
     position: relative;
     margin-bottom: 12px;
 }
-
 .chapter-selector-button {
     width: 100%;
     display: flex;
@@ -231,30 +215,26 @@
     padding: 13px 16px;
     border: 1px solid #dce3dc;
     border-radius: 8px;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #263b30;
     text-align: left;
     cursor: pointer;
 }
-
 .chapter-selector-button:hover {
     border-color: #b9c8bd;
-    background-color: #fcfdfb;
+    background: #fcfdfb;
 }
-
 .chapter-selector-info {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
-
 .chapter-selector-info > span {
     color: #7f8c84;
     font-size: 9px;
     font-weight: 700;
     letter-spacing: 1px;
 }
-
 .chapter-selector-info strong {
     display: flex;
     align-items: center;
@@ -263,7 +243,6 @@
     font-size: 14px;
     font-weight: 600;
 }
-
 .chapter-menu {
     position: absolute;
     top: calc(100% + 6px);
@@ -275,10 +254,9 @@
     padding: 5px;
     border: 1px solid #dce3dc;
     border-radius: 8px;
-    background-color: #ffffff;
+    background: #ffffff;
     box-shadow: 0 12px 30px rgba(38, 59, 48, 0.12);
 }
-
 .chapter-menu-item {
     width: 100%;
     display: flex;
@@ -287,31 +265,29 @@
     padding: 10px 11px;
     border: none;
     border-radius: 6px;
-    background-color: transparent;
+    background: transparent;
     color: #52635a;
     text-align: left;
     font-family: inherit;
     font-size: 13px;
     cursor: pointer;
 }
-
 .chapter-menu-item:hover {
-    background-color: #f4f7f2;
+    background: #f4f7f2;
     color: #263b30;
 }
-
 .chapter-menu-item.active {
-    background-color: #eaf1e7;
+    background: #eaf1e7;
     color: #2f6653;
     font-weight: 600;
 }
-
 .chapter-menu-text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
+/* CHAPTER STATUS */
 .writing-status-row {
     display: flex;
     align-items: center;
@@ -319,7 +295,6 @@
     gap: 16px;
     margin-bottom: 12px;
 }
-
 .writing-current-status {
     display: flex;
     align-items: center;
@@ -327,7 +302,6 @@
     color: #7f8c84;
     font-size: 12px;
 }
-
 .chapter-complete-button {
     display: flex;
     align-items: center;
@@ -335,31 +309,40 @@
     padding: 8px 12px;
     border: 1px solid #cbd5ce;
     border-radius: 7px;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #2f6653;
     font-family: inherit;
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
 }
-
 .chapter-complete-button:hover {
-    background-color: #f1f5ef;
+    background: #f1f5ef;
 }
-
 .chapter-complete-button.completed {
     border-color: #b9d0bf;
-    background-color: #edf5ee;
+    background: #edf5ee;
     color: #4d8b69;
 }
 
+/* WRITING EDITOR */
+.writing-workspace {
+    display: block;
+    min-width: 0;
+}
+.writing-workspace.with-check-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 360px);
+    align-items: start;
+    gap: 16px;
+}
 .writing-editor-container {
+    min-width: 0;
     overflow: hidden;
     border: 1px solid #dce3dc;
     border-radius: 10px;
-    background-color: #ffffff;
+    background: #ffffff;
 }
-
 .writing-toolbar {
     display: flex;
     align-items: center;
@@ -367,9 +350,8 @@
     min-height: 50px;
     padding: 7px 10px;
     border-bottom: 1px solid #e2e7e1;
-    background-color: #fafbf8;
+    background: #fafbf8;
 }
-
 .writing-toolbar button {
     display: flex;
     align-items: center;
@@ -378,36 +360,32 @@
     height: 32px;
     border: none;
     border-radius: 5px;
-    background-color: transparent;
+    background: transparent;
     color: #52635a;
     cursor: pointer;
 }
-
 .writing-toolbar button:hover {
-    background-color: #e8eee6;
+    background: #e8eee6;
     color: #263b30;
 }
-
 .heading-select {
     height: 32px;
     padding: 0 7px;
     border: 1px solid #dce3dc;
     border-radius: 5px;
     outline: none;
-    background-color: #ffffff;
+    background: #ffffff;
     color: #52635a;
     font-family: inherit;
     font-size: 12px;
     cursor: pointer;
 }
-
 .toolbar-divider {
     width: 1px;
     height: 22px;
     margin: 0 5px;
-    background-color: #dce3dc;
+    background: #dce3dc;
 }
-
 .writing-editor {
     min-height: 620px;
     padding: 38px 48px;
@@ -416,57 +394,305 @@
     font-family: Georgia, serif;
     font-size: 17px;
     line-height: 1.9;
+    overflow-wrap: anywhere;
 }
-
 .writing-editor:empty::before {
     content: attr(data-placeholder);
     color: #b1bbb4;
     pointer-events: none;
 }
-
 .writing-editor h1,
 .writing-editor h2,
 .writing-editor h3 {
     color: #263b30;
     font-family: Georgia, serif;
 }
-
 .writing-editor h1 {
     font-size: 28px;
 }
-
 .writing-editor h2 {
     font-size: 24px;
 }
-
 .writing-editor h3 {
     font-size: 20px;
 }
-
 .writing-editor ul,
 .writing-editor ol {
     padding-left: 28px;
 }
 
+/* CHAPTER CHECK PANEL */
+.chapter-check-panel {
+    min-width: 0;
+    max-height: 760px;
+    overflow-y: auto;
+    border: 1px solid #dce3dc;
+    border-radius: 10px;
+    background: #fffdf9;
+}
+.chapter-check-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 18px;
+    border-bottom: 1px solid #e3e8e1;
+}
+.chapter-check-header p {
+    margin: 0 0 6px;
+    color: #2f6653;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.chapter-check-header h2 {
+    margin: 0;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 21px;
+    font-weight: 500;
+}
+.chapter-check-header span {
+    display: block;
+    margin-top: 6px;
+    color: #7f8c84;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+.chapter-check-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: #7f8c84;
+    cursor: pointer;
+}
+.chapter-check-close:hover {
+    background: #edf1eb;
+    color: #263b30;
+}
+.chapter-check-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 10px 12px 0;
+    border-bottom: 1px solid #e3e8e1;
+}
+.chapter-check-tabs button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 8px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    background: transparent;
+    color: #7f8c84;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.chapter-check-tabs button.active {
+    border-bottom-color: #2f6653;
+    color: #2f6653;
+}
+.chapter-check-content {
+    padding: 16px;
+}
+.chapter-check-description,
+.chapter-ai-intro p {
+    margin: 0 0 14px;
+    color: #7f8c84;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.chapter-check-group {
+    margin-bottom: 20px;
+}
+.chapter-check-group h3 {
+    margin: 0 0 10px;
+    color: #2f6653;
+    font-size: 13px;
+}
+.chapter-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e9ede7;
+    cursor: pointer;
+}
+.chapter-check-item input {
+    margin-top: 3px;
+    accent-color: #2f6653;
+    cursor: pointer;
+}
+.chapter-check-item span {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+.chapter-check-item strong {
+    color: #263b30;
+    font-size: 12px;
+    overflow-wrap: anywhere;
+}
+.chapter-check-item small {
+    color: #7f8c84;
+    font-size: 11px;
+    line-height: 1.5;
+}
+.chapter-check-save {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 12px;
+    padding: 11px 14px;
+    border: 1px solid #2f6653;
+    border-radius: 7px;
+    background: #2f6653;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.chapter-check-save:hover {
+    background: #255744;
+}
+.chapter-check-save:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.chapter-check-error,
+.chapter-check-success {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 12px;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+.chapter-check-error {
+    background: #fbefeb;
+    color: #a64e39;
+}
+.chapter-check-success {
+    background: #edf5ee;
+    color: #39734f;
+}
+.chapter-check-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 24px 12px;
+    color: #7f8c84;
+    font-size: 12px;
+}
+.chapter-check-empty {
+    padding: 12px;
+    border-radius: 6px;
+    background: #f4f6f1;
+    color: #7f8c84;
+    font-size: 12px;
+    line-height: 1.6;
+}
+.chapter-ai-intro > svg {
+    margin-bottom: 8px;
+    color: #2f6653;
+}
+.chapter-ai-intro h3 {
+    margin: 0 0 10px;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: 500;
+}
+.chapter-ai-results {
+    margin-top: 20px;
+}
+.chapter-ai-date {
+    color: #7f8c84;
+    font-size: 10px;
+    line-height: 1.5;
+}
+.chapter-ai-summary {
+    color: #52635a;
+    font-size: 12px;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+.chapter-ai-finding {
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid #e0e6df;
+    border-radius: 7px;
+    background: #ffffff;
+}
+.chapter-ai-category {
+    color: #2f6653;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+.chapter-ai-finding h4 {
+    margin: 8px 0;
+    color: #263b30;
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+.chapter-ai-finding p {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin: 10px 0 0;
+    color: #647269;
+    font-size: 12px;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+.chapter-ai-finding p strong {
+    color: #263b30;
+}
+.chapter-check-spinner {
+    animation: chapter-check-spin 1s linear infinite;
+}
+@keyframes chapter-check-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* STORY GUIDE */
 .guide-overlay {
     position: fixed;
     inset: 0;
     z-index: 4000;
     display: flex;
     justify-content: flex-end;
-    background-color: rgba(38, 59, 48, 0.22);
+    background: rgba(38, 59, 48, 0.22);
 }
-
 .story-guide-panel {
     width: 430px;
     max-width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #fffdf9;
+    background: #fffdf9;
     box-shadow: -12px 0 35px rgba(38, 59, 48, 0.12);
 }
-
 .guide-header {
     display: flex;
     align-items: flex-start;
@@ -474,7 +700,6 @@
     padding: 28px 24px 22px;
     border-bottom: 1px solid #e3e8e1;
 }
-
 .guide-header p {
     margin: 0 0 6px;
     color: #2f6653;
@@ -482,7 +707,6 @@
     font-weight: 700;
     letter-spacing: 1.4px;
 }
-
 .guide-header h2 {
     margin: 0;
     color: #263b30;
@@ -490,7 +714,6 @@
     font-size: 23px;
     font-weight: 500;
 }
-
 .guide-close-button {
     display: flex;
     align-items: center;
@@ -499,22 +722,19 @@
     height: 32px;
     border: none;
     border-radius: 6px;
-    background-color: transparent;
+    background: transparent;
     color: #7f8c84;
     cursor: pointer;
 }
-
 .guide-close-button:hover {
-    background-color: #edf1eb;
+    background: #edf1eb;
     color: #263b30;
 }
-
 .guide-content {
     flex: 1;
     overflow-y: auto;
     padding: 24px;
 }
-
 .guide-act-label {
     margin: 0 0 5px;
     color: #7f8c84;
@@ -522,7 +742,6 @@
     font-weight: 700;
     letter-spacing: 1.2px;
 }
-
 .guide-act > h3 {
     margin: 0 0 18px;
     color: #263b30;
@@ -530,12 +749,10 @@
     font-size: 20px;
     font-weight: 500;
 }
-
 .guide-chapter {
     padding-left: 15px;
     border-left: 2px solid #dce8d5;
 }
-
 .guide-chapter-title {
     display: flex;
     align-items: center;
@@ -545,17 +762,14 @@
     font-size: 14px;
     font-weight: 700;
 }
-
 .guide-event {
     margin-bottom: 24px;
     padding: 0 0 20px 14px;
     border-bottom: 1px solid #e7ebe5;
 }
-
 .guide-event:last-child {
     margin-bottom: 0;
 }
-
 .guide-event-label,
 .guide-scene-label {
     margin-bottom: 5px;
@@ -564,14 +778,12 @@
     font-weight: 700;
     letter-spacing: 1px;
 }
-
 .guide-event h4 {
     margin: 0;
     color: #263b30;
     font-size: 15px;
     font-weight: 700;
 }
-
 .guide-event-description {
     margin: 8px 0 0;
     color: #647269;
@@ -579,28 +791,23 @@
     line-height: 1.65;
     white-space: pre-wrap;
 }
-
 .guide-scenes {
     margin-top: 16px;
     padding-left: 14px;
     border-left: 1px solid #dce3dc;
 }
-
 .guide-scene {
     margin-bottom: 17px;
 }
-
 .guide-scene:last-child {
     margin-bottom: 0;
 }
-
 .guide-scene h5 {
     margin: 0;
     color: #263b30;
     font-size: 13px;
     font-weight: 600;
 }
-
 .guide-scene-description {
     margin: 6px 0 0;
     color: #7f8c84;
@@ -608,7 +815,6 @@
     line-height: 1.65;
     white-space: pre-wrap;
 }
-
 .guide-empty {
     margin: 0;
     padding: 12px 0;
@@ -617,58 +823,62 @@
     line-height: 1.6;
 }
 
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+    .writing-workspace.with-check-panel {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .chapter-check-panel {
+        max-height: 650px;
+    }
+}
 @media (max-width: 800px) {
     .writing-header {
         align-items: flex-start;
         flex-direction: column;
     }
-
     .writing-header-actions {
         width: 100%;
+        flex-wrap: wrap;
     }
-
+    .story-check-open-button,
     .story-guide-button,
     .save-draft-button {
         flex: 1;
     }
-
     .writing-editor {
         min-height: 500px;
         padding: 28px 24px;
     }
+    .chapter-check-panel {
+        max-height: none;
+    }
 }
-
 @media (max-width: 600px) {
     .chapter-list-header,
     .chapter-list-row {
         grid-template-columns: 1fr;
         gap: 7px;
     }
-
     .chapter-list-header span:last-child {
         display: none;
     }
-
     .writing-status-row {
         align-items: flex-start;
         flex-direction: column;
     }
-
     .chapter-complete-button {
         width: 100%;
         justify-content: center;
     }
-
     .writing-toolbar {
         flex-wrap: wrap;
     }
-
     .writing-editor {
         min-height: 450px;
         padding: 24px 18px;
         font-size: 16px;
     }
-
     .story-guide-panel {
         width: 100%;
     }
