@@ -424,7 +424,6 @@
 /* CHAPTER CHECK PANEL */
 .chapter-check-panel {
     min-width: 0;
-    max-height: 760px;
     overflow-y: auto;
     border: 1px solid #dce3dc;
     border-radius: 10px;
