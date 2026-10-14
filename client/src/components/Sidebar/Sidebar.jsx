@@ -136,13 +136,6 @@ function Sidebar() {
                                     <span>World Builder</span>
                                 </NavLink>
 
-                                <NavLink
-                                    to={`/stories/${storyId}/check`}
-                                    className="sidebar-link"
-                                >
-                                    <ClipboardCheck size={18} />
-                                    <span>Story Check</span>
-                                </NavLink>
 
                             </nav>
                         ) : (
