@@ -225,12 +225,7 @@ function StoryOverview() {
                                 "No genre"}
                         </span>
 
-                        <span>
-                            Updated{" "}
-                            {formatDate(
-                                story.updatedAt
-                            )}
-                        </span>
+    
                     </div>
 
                     <button
