@@ -9,25 +9,25 @@ var router = express.Router();
 router.use(authMiddleware);
 
 
-/* GET LATEST DRAFT */
+ // GET LATEST DRAFTS
 router.get("/latest", async function (req, res) {
     try {
         var collection = getDraftCollection();
 
-        var draft = await collection.findOne(
+        var drafts = await collection.find(
             {
                 userId: req.user.userId,
                 content: { $regex: /\S/ }
-            },
-            {
-                sort: { updatedAt: -1, createdAt: -1 }
             }
-        );
+        )
+        .sort({ updatedAt: -1, createdAt: -1 })
+        .limit(2)
+        .toArray();
 
-        res.json(draft || null);
+        res.json(drafts);
 
     } catch (error) {
-        console.error("Get latest draft error:", error);
+        console.error("Get latest drafts error:", error);
 
         res.status(500).json({
             message: "Server error."
