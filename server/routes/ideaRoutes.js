@@ -35,6 +35,34 @@ router.get("/", authMiddleware, async function (req, res) {
 });
 
 
+ // GET LATEST IDEA
+router.get("/latest", authMiddleware, async function (req, res) {
+    try {
+        var ideas = getIdeaCollection();
+
+        var idea = await ideas.findOne(
+            {
+                userId: new ObjectId(req.user.userId)
+            },
+            {
+                sort: { createdAt: -1 }
+            }
+        );
+
+        res.json({
+            idea: idea
+        });
+
+    } catch (error) {
+        console.error("Get latest idea error:", error);
+
+        res.status(500).json({
+            message: "Server error."
+        });
+    }
+});
+
+
 // CREATE IDEA
 router.post("/", authMiddleware, async function (req, res) {
     try {

@@ -173,3 +173,44 @@
     font-size: 13px;
     line-height: 1.5;
 }
+
+/* Responsive */
+
+@media (max-width: 650px) {
+    .dashboard-header h1 {
+        font-size: 30px;
+    }
+
+    .continue-writing-heading {
+        padding: 18px 15px;
+    }
+
+    .continue-writing-row {
+        gap: 11px;
+        padding: 16px 14px;
+    }
+
+    .continue-writing-info h3 {
+        overflow-wrap: anywhere;
+        font-size: 15px;
+    }
+
+    .continue-writing-action {
+        gap: 4px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 420px) {
+    .continue-writing-row {
+        flex-wrap: wrap;
+    }
+
+    .continue-writing-info {
+        flex-basis: calc(100% - 60px);
+    }
+
+    .continue-writing-action {
+        margin-left: 56px;
+    }
+}
