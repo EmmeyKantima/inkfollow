@@ -8,6 +8,34 @@ var router = express.Router();
 
 router.use(authMiddleware);
 
+
+/* GET LATEST DRAFT */
+router.get("/latest", async function (req, res) {
+    try {
+        var collection = getDraftCollection();
+
+        var draft = await collection.findOne(
+            {
+                userId: req.user.userId,
+                content: { $regex: /\S/ }
+            },
+            {
+                sort: { updatedAt: -1, createdAt: -1 }
+            }
+        );
+
+        res.json(draft || null);
+
+    } catch (error) {
+        console.error("Get latest draft error:", error);
+
+        res.status(500).json({
+            message: "Server error."
+        });
+    }
+});
+
+
 // GET DRAFT FOR CHAPTER
 router.get("/chapter/:chapterId", async function (req, res) {
     try {
