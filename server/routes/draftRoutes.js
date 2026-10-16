@@ -3,28 +3,45 @@ var { ObjectId } = require("mongodb");
 
 var authMiddleware = require("../middleware/authMiddleware");
 var { getDraftCollection } = require("../models/Draft");
+var { getStoryCollection } = require("../models/Story");
 
 var router = express.Router();
 
 router.use(authMiddleware);
 
-
  // GET LATEST DRAFTS
 router.get("/latest", async function (req, res) {
     try {
         var collection = getDraftCollection();
+        var storyCollection = getStoryCollection();
 
-        var drafts = await collection.find(
-            {
-                userId: req.user.userId,
-                content: { $regex: /\S/ }
-            }
-        )
+        var drafts = await collection.find({
+            userId: req.user.userId,
+            content: { $regex: /\S/ }
+        })
         .sort({ updatedAt: -1, createdAt: -1 })
         .limit(2)
         .toArray();
 
-        res.json(drafts);
+        var draftsWithStory = await Promise.all(
+            drafts.map(async function (draft) {
+                var story = null;
+
+                if (ObjectId.isValid(draft.storyId)) {
+                    story = await storyCollection.findOne({
+                        _id: new ObjectId(draft.storyId),
+                        userId: new ObjectId(req.user.userId)
+                    });
+                }
+
+                return {
+                    ...draft,
+                    storyTitle: story ? story.title : "Unknown Story"
+                };
+            })
+        );
+
+        res.json(draftsWithStory);
 
     } catch (error) {
         console.error("Get latest drafts error:", error);
@@ -34,6 +51,7 @@ router.get("/latest", async function (req, res) {
         });
     }
 });
+
 
 
 // GET DRAFT FOR CHAPTER
