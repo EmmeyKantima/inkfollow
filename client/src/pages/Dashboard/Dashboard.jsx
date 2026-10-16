@@ -118,10 +118,15 @@ function Dashboard() {
                                 <div className="continue-writing-icon">
                                     <PenLine size={18} />
                                 </div>
-
+                                
                                 <div className="continue-writing-info">
                                     <h3>{draft.title || "Untitled Chapter"}</h3>
-                                    <p>
+
+                                    <p className="continue-writing-story">
+                                        {draft.storyTitle || "Unknown Story"}
+                                    </p>
+
+                                    <p className="continue-writing-date">
                                         <Clock3 size={14} />
                                         Last edited {formatDate(draft.updatedAt)}
                                     </p>

@@ -132,6 +132,22 @@
     font-size: 13px;
 }
 
+.continue-writing-info .continue-writing-story {
+    margin: 6px 0 0;
+    color: #2f6653;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.continue-writing-info .continue-writing-date {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 5px 0 0;
+    color: #7f8c84;
+    font-size: 12px;
+}
+
 .continue-writing-action {
     display: flex;
     align-items: center;
@@ -174,6 +190,86 @@
     line-height: 1.5;
 }
 
+
+/* Recent ideas */
+
+.recent-ideas {
+    width: 100%;
+    margin-top: 25px;
+    border: 1px solid #dce8d5;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.recent-ideas-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 20px;
+    border-bottom: 1px solid #dce8d5;
+    background-color: #f7f7f2;
+}
+
+.recent-ideas-heading .page-eyebrow {
+    margin-bottom: 6px;
+}
+
+.recent-ideas-heading h2 {
+    margin: 0;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.recent-idea-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 100px;
+    padding: 20px;
+}
+
+.recent-idea-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    background-color: #f8edc9;
+    color: #8a6b20;
+}
+
+.recent-idea-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.recent-idea-info h3 {
+    margin: 0;
+    color: #263b30;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 500;
+    overflow-wrap: anywhere;
+}
+
+.recent-idea-info p {
+    margin: 6px 0;
+    color: #7f8c84;
+    font-size: 13px;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.recent-idea-info span {
+    color: #7f8c84;
+    font-size: 12px;
+}
+
 /* Responsive */
 
 @media (max-width: 650px) {
@@ -212,5 +308,16 @@
 
     .continue-writing-action {
         margin-left: 56px;
+    }
+}
+
+@media (max-width: 650px) {
+    .recent-ideas-heading {
+        padding: 18px 15px;
+    }
+
+    .recent-idea-row {
+        gap: 11px;
+        padding: 16px 14px;
     }
 }
