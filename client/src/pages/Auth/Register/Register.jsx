@@ -1,7 +1,10 @@
+
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { PenLine } from "lucide-react";
 
 import API_URL from "../../../api/api";
+import "./Register.css";
 
 function Register() {
     var navigate = useNavigate();
@@ -51,7 +54,6 @@ function Register() {
 
             if (!response.ok) {
                 setError(data.message || "Registration failed.");
-                setLoading(false);
                 return;
             }
 
@@ -63,103 +65,126 @@ function Register() {
 
         } catch (error) {
             console.error("Register error:", error);
-
-            setError(
-                "Unable to connect to the server."
-            );
-
+            setError("Unable to connect to the server.");
         } finally {
             setLoading(false);
         }
     }
 
     return (
-        <div>
-            <h1>Create an Account</h1>
+        <div className="auth-page">
+            <div className="auth-container">
 
-            <form onSubmit={handleSubmit}>
-
-                <div>
-                    <label>Name</label>
-
-                    <input
-                        type="text"
-                        value={name}
-                        onChange={function (event) {
-                            setName(event.target.value);
-                        }}
-                        required
-                    />
+                <div className="auth-brand">
+                    <div className="auth-logo">
+                        <PenLine size={22} />
+                    </div>
+                    <span>INKSPIRE</span>
                 </div>
 
-                <div>
-                    <label>Username</label>
+                <div className="auth-card">
+                    <div className="auth-header">
+                        <h1>Create an Account</h1>
+                        <p>Start building your stories with Inkspire.</p>
+                    </div>
 
-                    <input
-                        type="text"
-                        value={username}
-                        onChange={function (event) {
-                            setUsername(event.target.value);
-                        }}
-                        required
-                    />
+                    <form
+                        className="auth-form"
+                        onSubmit={handleSubmit}
+                    >
+                        <div className="auth-form-group">
+                            <label>Name</label>
+                            <input
+                                type="text"
+                                value={name}
+                                onChange={function (event) {
+                                    setName(event.target.value);
+                                }}
+                                placeholder="Enter your name"
+                                required
+                            />
+                        </div>
+
+                        <div className="auth-form-group">
+                            <label>Username</label>
+                            <input
+                                type="text"
+                                value={username}
+                                onChange={function (event) {
+                                    setUsername(event.target.value);
+                                }}
+                                placeholder="Choose a username"
+                                required
+                            />
+                        </div>
+
+                        <div className="auth-form-group">
+                            <label>Email</label>
+                            <input
+                                type="email"
+                                value={email}
+                                onChange={function (event) {
+                                    setEmail(event.target.value);
+                                }}
+                                placeholder="Enter your email"
+                                required
+                            />
+                        </div>
+
+                        <div className="auth-form-group">
+                            <label>Password</label>
+                            <input
+                                type="password"
+                                value={password}
+                                onChange={function (event) {
+                                    setPassword(event.target.value);
+                                }}
+                                placeholder="Create a password"
+                                required
+                            />
+                        </div>
+
+                        <div className="auth-form-group">
+                            <label>Confirm Password</label>
+                            <input
+                                type="password"
+                                value={confirmPassword}
+                                onChange={function (event) {
+                                    setConfirmPassword(event.target.value);
+                                }}
+                                placeholder="Enter your password again"
+                                required
+                            />
+                        </div>
+
+                        {error && (
+                            <div className="auth-error">
+                                {error}
+                            </div>
+                        )}
+
+                        {message && (
+                            <div className="auth-success">
+                                {message}
+                            </div>
+                        )}
+
+                        <button
+                            type="submit"
+                            className="auth-submit-button"
+                            disabled={loading}
+                        >
+                            {loading ? "Creating Account..." : "Register"}
+                        </button>
+                    </form>
+
+                    <div className="auth-footer">
+                        <span>Already have an account?</span>
+                        <Link to="/login">Login</Link>
+                    </div>
                 </div>
 
-                <div>
-                    <label>Email</label>
-
-                    <input
-                        type="email"
-                        value={email}
-                        onChange={function (event) {
-                            setEmail(event.target.value);
-                        }}
-                        required
-                    />
-                </div>
-
-                <div>
-                    <label>Password</label>
-
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={function (event) {
-                            setPassword(event.target.value);
-                        }}
-                        required
-                    />
-                </div>
-
-                <div>
-                    <label>Confirm Password</label>
-
-                    <input
-                        type="password"
-                        value={confirmPassword}
-                        onChange={function (event) {
-                            setConfirmPassword(event.target.value);
-                        }}
-                        required
-                    />
-                </div>
-
-                {error && (
-                    <p>{error}</p>
-                )}
-
-                {message && (
-                    <p>{message}</p>
-                )}
-
-                <button
-                    type="submit"
-                    disabled={loading}
-                >
-                    {loading ? "Creating Account..." : "Register"}
-                </button>
-
-            </form>
+            </div>
         </div>
     );
 }
