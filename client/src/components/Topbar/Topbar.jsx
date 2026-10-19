@@ -33,9 +33,7 @@ function TopBar() {
                     </span>
 
                 </div>
-
-                <ChevronDown size={16} />
-
+               
             </button>
 
         </header>

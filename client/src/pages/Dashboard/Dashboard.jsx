@@ -96,7 +96,7 @@ function Dashboard() {
                         <p className="page-eyebrow">YOUR LATEST WORK</p>
                         <h2>Continue Writing</h2>
                     </div>
-                    <PenLine size={22} />
+                    
                 </div>
 
                 {loading ? (
