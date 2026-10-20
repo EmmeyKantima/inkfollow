@@ -9,7 +9,6 @@ import {
     ListTree,
     Globe,
     PenLine,
-    ClipboardCheck,
     LogOut,
     ArrowLeft,
     X,
