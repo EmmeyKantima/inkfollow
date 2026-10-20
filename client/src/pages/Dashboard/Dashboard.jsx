@@ -84,7 +84,7 @@ function Dashboard() {
         <div className="dashboard-page">
             <header className="dashboard-header">
                 <div>
-                    <p className="page-eyebrow">YOUR WRITING SPACE</p>
+                    
                     <h1>Dashboard</h1>
                     
                 </div>

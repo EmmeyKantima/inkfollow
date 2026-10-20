@@ -393,7 +393,7 @@ function Ideas() {
                 <div className="idea-detail-header">
                     <div>
                         <p className="page-eyebrow">
-                            IDEA VAULT
+                            YOUR IDEA VAULT
                         </p>
 
                         <h1>
@@ -650,7 +650,7 @@ function Ideas() {
             <div className="ideas-header">
                 <div>
                     <p className="page-eyebrow">
-                        IDEA VAULT
+                        YOUR IDEA VAULT
                     </p>
 
                     <h1>Ideas</h1>
