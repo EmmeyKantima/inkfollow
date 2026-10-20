@@ -211,10 +211,6 @@ function StoryOverview() {
 
                     <h1>{story.title}</h1>
 
-                    <p className="story-overview-description">
-                        Your central workspace for
-                        developing this story.
-                    </p>
                 </div>
 
                 <div className="story-overview-header-right">

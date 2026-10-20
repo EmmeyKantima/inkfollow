@@ -727,9 +727,7 @@ function StoryWriting() {
         <div className="writing-header-left">
           <p className="writing-eyebrow">WRITING</p>
           <h1>{selectedChapter.title}</h1>
-          <p className="writing-description">
-            Write your story continuously while keeping your story plan nearby.
-          </p>
+          
         </div>
 
         <div className="writing-header-actions">
