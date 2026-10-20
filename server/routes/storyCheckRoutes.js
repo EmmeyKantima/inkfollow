@@ -374,9 +374,6 @@ router.post("/:storyId/chapter/:chapterId/ai", async function (req, res) {
                 "If the information is insufficient to verify something, state that it cannot be verified. " +
                 "Never invent story facts or treat assumptions as established information. " +
 
-                "Do not check Relationship Consistency or Timeline Consistency. These areas are not currently in scope. " +
-                "Do not create findings about character relationships, event chronology, dates, or character ages. " +
-
                 "Do not teach writing techniques, critique writing style, suggest better wording, rewrite sentences, grade the chapter, or recommend new plot ideas. " +
                 "Do not tell the author how to rewrite the story. " +
                 "Focus on identifying and explaining consistency issues so the author can decide what to do. " +
