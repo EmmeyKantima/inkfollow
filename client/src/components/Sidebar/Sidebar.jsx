@@ -62,7 +62,7 @@ function Sidebar() {
                     <>
                         <div className="sidebar-brand">
                             <div>
-                                <h1>Inkspire</h1>
+                                <h1>Inkfollow</h1>
                                 <span>Writing Assistant</span>
                             </div>
 
@@ -222,7 +222,7 @@ function Sidebar() {
                             </p>
 
                             <h2>
-                                Log out of Inkspire?
+                                Log out of Inkfollow?
                             </h2>
 
                             <p>

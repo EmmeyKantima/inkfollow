@@ -79,13 +79,13 @@ function Register() {
                     <div className="auth-logo">
                         <PenLine size={22} />
                     </div>
-                    <span>INKSPIRE</span>
+                    <span>INKFOLLOW</span>
                 </div>
 
                 <div className="auth-card">
                     <div className="auth-header">
                         <h1>Create an Account</h1>
-                        <p>Start building your stories with Inkspire.</p>
+                        <p>Start building your stories with inkfollow.</p>
                     </div>
 
                     <form

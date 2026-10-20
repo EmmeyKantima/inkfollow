@@ -84,7 +84,7 @@ function Login() {
                         <PenLine size={22} />
                     </div>
 
-                    <span>INKSPIRE</span>
+                    <span>INKFOLLOW</span>
                 </div>
 
                 <div className="auth-card">
@@ -92,7 +92,7 @@ function Login() {
                     <div className="auth-header">
 
                         <h1>
-                            Login to Inkspire
+                            Login
                         </h1>
 
                     </div>
