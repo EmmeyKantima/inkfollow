@@ -669,7 +669,9 @@ function Ideas() {
             {showForm && renderIdeaForm()}
 
             {loading && (
-                <p>Loading ideas...</p>
+                <div className="ideas-status">
+                    Loading ideas...
+                </div>
             )}
 
             {error && (

@@ -429,6 +429,12 @@
     font-size: 12px;
 }
 
+.ideas-status {
+    padding: 40px;
+    color: #7f8c84;
+    text-align: center;
+}
+
 .new-idea-row {
     display: flex;
     align-items: center;
