@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ArrowRight, Clock3, PenLine } from "lucide-react";
@@ -84,8 +83,10 @@ function Dashboard() {
         <div className="dashboard-page">
             <header className="dashboard-header">
                 <div>
-                    
-                    <h1>Dashboard</h1>
+                    <p className="page-eyebrow">YOUR WRITING SPACE</p>
+                    <h1>
+                        Dashboard
+                    </h1>
                     
                 </div>
             </header>
@@ -93,8 +94,12 @@ function Dashboard() {
             <section className="continue-writing">
                 <div className="continue-writing-heading">
                     <div>
-                        <p className="page-eyebrow">YOUR LATEST WORK</p>
-                        <h2>Continue Writing</h2>
+                        <p className="page-eyebrow">
+                            YOUR LATEST WORK
+                        </p>
+                        <h2>
+                            Continue Writing
+                        </h2>
                     </div>
                     
                 </div>
@@ -145,7 +150,9 @@ function Dashboard() {
                             <PenLine size={18} />
                         </div>
                         <div>
-                            <h3>No drafts yet</h3>
+                            <h3>
+                                No drafts yet
+                            </h3>
                             <p>
                                 Start writing a chapter and your latest work will appear here.
                             </p>
@@ -157,8 +164,12 @@ function Dashboard() {
             <section className="recent-ideas">
                 <div className="recent-ideas-heading">
                     <div>
-                        <p className="page-eyebrow">YOUR LATEST IDEA</p>
-                        <h2>Recent Ideas</h2>
+                        <p className="page-eyebrow">
+                            YOUR LATEST IDEA
+                        </p>
+                        <h2>
+                            Recent Ideas
+                        </h2>
                     </div>
                 </div>
 

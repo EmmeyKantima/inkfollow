@@ -694,11 +694,9 @@ function Ideas() {
                                 <strong>
                                     No ideas yet
                                 </strong>
-
                                 <p>
                                     Start by creating
-                                    your first story
-                                    idea.
+                                    your first story idea.
                                 </p>
                             </div>
                         </div>

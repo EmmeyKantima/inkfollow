@@ -84,8 +84,12 @@ function Register() {
 
                 <div className="auth-card">
                     <div className="auth-header">
-                        <h1>Create an Account</h1>
-                        <p>Start building your stories with inkfollow.</p>
+                        <h1>
+                            Create an Account
+                        </h1>
+                        <p>
+                            Start building your stories with inkfollow.
+                        </p>
                     </div>
 
                     <form

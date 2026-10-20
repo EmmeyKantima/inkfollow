@@ -12,7 +12,6 @@ import Stories from "./pages/Stories/Stories";
 
 import StoryOverview from "./pages/Stories/StoryOverview/StoryOverview";
 import StoryCharacters from "./pages/Stories/StoryCharacters/StoryCharacters";
-import StoryTimeline from "./pages/Stories/StoryTimeline/StoryTimeline";
 import StoryBuilder from "./pages/Stories/StoryBuilder/StoryBuilder";
 import StoryWorld from "./pages/Stories/StoryWorld/StoryWorld";
 import StoryWriting from "./pages/Stories/StoryWriting/StoryWriting";
@@ -37,7 +36,6 @@ function App() {
                     element={<Register />}
                 />
 
-
                 {/* Default page */}
 
                 <Route
@@ -49,7 +47,6 @@ function App() {
                         />
                     }
                 />
-
 
                 {/* Protected application */}
 
@@ -97,10 +94,6 @@ function App() {
                         element={<StoryCharacters />}
                     />
 
-                    <Route
-                        path="/stories/:storyId/timeline"
-                        element={<StoryTimeline />}
-                    />
 
                     <Route
                         path="/stories/:storyId/builder"

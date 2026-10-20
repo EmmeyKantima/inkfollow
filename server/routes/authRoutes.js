@@ -2,12 +2,10 @@ var express = require("express");
 var bcrypt = require("bcryptjs");
 var jwt = require("jsonwebtoken");
 var { ObjectId } = require("mongodb");
-
 var { getUserCollection } = require("../models/User");
 var authMiddleware = require("../middleware/authMiddleware");
 
 var router = express.Router();
-
 
 // REGISTER
 router.post("/register", async function (req, res) {
@@ -93,7 +91,6 @@ router.post("/register", async function (req, res) {
         });
     }
 });
-
 
 // LOGIN
 router.post("/login", async function (req, res) {
@@ -205,6 +202,5 @@ router.get("/me", authMiddleware, async function (req, res) {
         });
     }
 });
-
 
 module.exports = router;

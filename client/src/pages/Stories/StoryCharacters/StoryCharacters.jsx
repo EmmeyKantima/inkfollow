@@ -859,13 +859,11 @@ function StoryCharacters() {
 
                                 <p>
                                     Start by creating
-                                    your first
-                                    character.
+                                    your first character.
                                 </p>
                             </div>
 
                         </div>
-
 
                     </div>
                 )}
