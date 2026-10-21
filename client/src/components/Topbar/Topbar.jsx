@@ -1,6 +1,6 @@
 import { UserCircle, ChevronDown } from "lucide-react";
 
-import "./TopBar.css";
+import "./Topbar.css";
 
 function TopBar() {
     var userData = localStorage.getItem("inkspireUser");
